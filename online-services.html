@@ -5,60 +5,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Online Services - PhilHealth</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="header-redesign.css" />
     <link rel="stylesheet" href="online-services-styles.css" />
   </head>
   <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-      <div class="container">
-        <div class="nav-content">
-          <div class="logo-section">
-            <div class="logo">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                <circle cx="20" cy="10" r="8" fill="#00a84f" />
-                <circle cx="28" cy="18" r="6" fill="#ffc300" />
-                <circle cx="20" cy="28" r="8" fill="#00a84f" />
-                <circle cx="12" cy="18" r="6" fill="#ffc300" />
-              </svg>
-              <span class="logo-text">PhilHealth</span>
+    <!-- Skip Link for Keyboard Users -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="site-header" role="banner">
+      <!-- Layer 1: Utility Strip -->
+      <div class="utility-strip">
+        <div class="container">
+          <nav class="utility-nav" aria-label="Utility navigation">
+            <a href="index.html" class="utility-link">Home</a>
+            <span class="utility-separator">|</span>
+            <a href="#" class="utility-link">Contact Us</a>
+            <span class="utility-separator">|</span>
+            <a href="disclaimer.html" class="utility-link">Disclaimer</a>
+            <span class="utility-separator">|</span>
+            <a href="privacy-notice.html" class="utility-link">Privacy Notice</a>
+          </nav>
+        </div>
+      </div>
+      
+      <!-- Layer 2: Main Header Bar -->
+      <div class="main-header-bar">
+        <div class="container">
+          <div class="header-content">
+            <!-- Enhanced Logo Section -->
+            <div class="brand-section">
+              <a href="index.html" class="brand-logo">
+                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="green-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" style="stop-color:#00c853;stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:#007a3d;stop-opacity:1" />
+                    </linearGradient>
+                    <linearGradient id="gold-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" style="stop-color:#ffd54f;stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:#d68400;stop-opacity:1" />
+                    </linearGradient>
+                  </defs>
+                  <!-- Cross/Plus Shape -->
+                  <circle cx="30" cy="15" r="10" fill="url(#green-gradient)" />
+                  <circle cx="42" cy="27" r="8" fill="url(#gold-gradient)" />
+                  <circle cx="30" cy="42" r="10" fill="url(#green-gradient)" />
+                  <circle cx="18" cy="27" r="8" fill="url(#gold-gradient)" />
+                  <!-- Central Shield -->
+                  <path d="M30 22 L34 26 L30 30 L26 26 Z" fill="#ffffff" opacity="0.9"/>
+                </svg>
+                <div class="brand-text">
+                  <span class="brand-name">PhilHealth</span>
+                  <span class="brand-tagline">Your Partner in Health</span>
+                </div>
+              </a>
             </div>
-            <p class="tagline">Your Partner in Health</p>
-          </div>
-          <div class="search-bar">
-            <input type="text" placeholder="Search..." />
-            <button class="search-btn">
-              <span>🔍</span>
-            </button>
-          </div>
-          <div class="nav-links">
-            <a href="index.html" class="nav-link">home</a>
-            <a href="#" class="nav-link">contact us</a>
-            <a href="disclaimer.html" class="nav-link">disclaimer</a>
-            <a href="privacy-notice.html" class="nav-link">privacy notice</a>
+            
+            <!-- Right Section: Search & Login (Login now placed to the right of search) -->
+            <div class="header-actions">
+              <div class="modern-search-bar">
+                <label for="header-search" class="visually-hidden">Search PhilHealth services</label>
+                <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/>
+                  <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <input type="search" 
+                       id="header-search"
+                       placeholder="Search services..." 
+                       aria-describedby="search-hint" />
+                <span id="search-hint" class="visually-hidden">Press forward slash to focus search</span>
+                <button class="modern-search-btn" type="submit" aria-label="Submit search">
+                  Search
+                </button>
+              </div>
+
+              <button class="login-btn login-icon-btn" aria-label="Log in to your account" title="Log in">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+                </svg>
+                <span class="visually-hidden">Log in</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </nav>
+      
+      <!-- Layer 3: Primary Navigation Bar -->
+      <nav class="primary-nav-bar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+          <ul class="primary-nav-menu">
+            <li><a href="about.html" class="primary-nav-link">ABOUT US</a></li>
+            <li><a href="members.html" class="primary-nav-link">MEMBERS</a></li>
+            <li><a href="partners.html" class="primary-nav-link">PARTNERS</a></li>
+            <li><a href="online-services.html" class="primary-nav-link active" aria-current="page">ONLINE SERVICES</a></li>
+            <li><a href="downloads.html" class="primary-nav-link">DOWNLOADS</a></li>
+            <li><a href="transparency.html" class="primary-nav-link">TRANSPARENCY</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-    <!-- Main Navigation Menu -->
-    <div class="main-menu">
+    <!-- Service Quick Navigation -->
+    <nav class="service-quick-nav" aria-label="Jump to service category">
       <div class="container">
-        <ul class="menu-items">
-          <li><a href="about.html" class="menu-link">about us</a></li>
-          <li><a href="members.html" class="menu-link">members</a></li>
-          <li><a href="partners.html" class="menu-link">partners</a></li>
-          <li>
-            <a href="online-services.html" class="menu-link active"
-              >online services</a
-            >
-          </li>
-          <li><a href="downloads.html" class="menu-link">downloads</a></li>
-          <li>
-            <a href="transparency.html" class="menu-link">transparency</a>
-          </li>
+        <h2 class="visually-hidden">Quick Navigation</h2>
+        <p class="quick-nav-label">Jump to:</p>
+        <ul class="quick-nav-list">
+          <li><a href="#membership" class="quick-nav-link">Membership</a></li>
+          <li><a href="#contribution" class="quick-nav-link">Contribution</a></li>
+          <li><a href="#collection" class="quick-nav-link">Collection</a></li>
+          <li><a href="#accreditation" class="quick-nav-link">Accreditation</a></li>
+          <li><a href="#benefits" class="quick-nav-link">Benefits</a></li>
         </ul>
       </div>
-    </div>
+    </nav>
 
     <!-- My PhilHealth Portal Hero -->
     <section class="portal-hero">
@@ -79,112 +140,371 @@
       </div>
     </section>
 
+    <!-- Main Content -->
+    <main id="main-content">
+    
     <!-- Membership Section -->
-    <section class="services-section">
+    <section id="membership" class="services-section" aria-labelledby="membership-heading">
       <div class="container">
-        <h2 class="section-heading">Membership</h2>
+        <h2 id="membership-heading" class="section-heading">Membership</h2>
         <div class="services-grid">
-          <div class="service-card">
-            <div class="service-icon orange">inquiry</div>
+          <article class="service-card" aria-labelledby="service-member-portal">
+            <div class="service-icon orange" aria-hidden="true">inquiry</div>
             <div class="service-content">
-              <h3>Member Portal</h3>
+              <h3 id="service-member-portal">
+                Member Portal
+                <button class="info-tooltip" 
+                        aria-label="What is Member Portal?"
+                        aria-expanded="false"
+                        aria-controls="tooltip-member-portal">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                    <text x="12" y="16" text-anchor="middle" fill="currentColor" font-size="14" font-weight="bold">i</text>
+                  </svg>
+                </button>
+              </h3>
+              
+              <div id="tooltip-member-portal" class="tooltip-content" role="tooltip" hidden>
+                <p><strong>What you can do:</strong></p>
+                <ul>
+                  <li>Check your membership status</li>
+                  <li>Verify personal information</li>
+                  <li>View contribution history</li>
+                </ul>
+                <p><strong>What you need:</strong> PhilHealth number and registered email</p>
+              </div>
+              
+              <div class="service-meta">
+                <span class="badge badge-easy" aria-label="Easy process">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" fill="currentColor"/>
+                  </svg>
+                  Easy
+                </span>
+                <span class="badge badge-time" aria-label="Estimated 5 minutes">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                    <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                  ~5 min
+                </span>
+              </div>
+              
               <div class="service-links">
-                <a href="#" class="service-link">Register/Login</a>
+                <a href="#" class="service-link">
+                  Register/Login
+                  <span class="visually-hidden"> to Member Portal</span>
+                </a>
               </div>
               <p class="service-description">
                 Enables members to check on the accuracy of their membership
                 details
               </p>
             </div>
-          </div>
+          </article>
 
-          <div class="service-card">
-            <div class="service-icon green">egroup</div>
+          <article class="service-card" aria-labelledby="service-egroup">
+            <div class="service-icon green" aria-hidden="true">egroup</div>
             <div class="service-content">
-              <h3>Electronic Group Enrollment System</h3>
+              <h3 id="service-egroup">
+                Electronic Group Enrollment System
+                <button class="info-tooltip" 
+                        aria-label="What is eGroup System?"
+                        aria-expanded="false"
+                        aria-controls="tooltip-egroup">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                    <text x="12" y="16" text-anchor="middle" fill="currentColor" font-size="14" font-weight="bold">i</text>
+                  </svg>
+                </button>
+              </h3>
+              
+              <div id="tooltip-egroup" class="tooltip-content" role="tooltip" hidden>
+                <p><strong>What you can do:</strong></p>
+                <ul>
+                  <li>Register groups (companies, organizations)</li>
+                  <li>Manage member enrollment</li>
+                  <li>Process billing transactions</li>
+                </ul>
+                <p><strong>What you need:</strong> Employer/organization credentials</p>
+              </div>
+              
+              <div class="service-meta">
+                <span class="badge badge-medium" aria-label="Moderate difficulty">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M12 2L2 7v10c0 5.5 3.8 10.7 10 12 6.2-1.3 10-6.5 10-12V7l-10-5z" fill="currentColor"/>
+                  </svg>
+                  Moderate
+                </span>
+                <span class="badge badge-time" aria-label="Estimated 10 to 15 minutes">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                    <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                  ~10-15 min
+                </span>
+              </div>
+              
               <div class="service-links">
-                <a href="#" class="service-link">Login</a>
+                <a href="#" class="service-link">
+                  Login
+                  <span class="visually-hidden"> to Electronic Group Enrollment System</span>
+                </a>
               </div>
               <p class="service-description">
                 Facilitates registration and billing of Organized Groups.
               </p>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- Contribution Section -->
-    <section class="services-section alt-bg">
+    <section id="contribution" class="services-section alt-bg" aria-labelledby="contribution-heading">
       <div class="container">
-        <h2 class="section-heading">Contribution</h2>
+        <h2 id="contribution-heading" class="section-heading">Contribution</h2>
         <div class="services-grid">
-          <div class="service-card">
-            <div class="service-icon teal">eprs</div>
+          <article class="service-card" aria-labelledby="service-eprs">
+            <div class="service-icon teal" aria-hidden="true">eprs</div>
             <div class="service-content">
-              <h3>Electronic Premium Remittance System</h3>
+              <h3 id="service-eprs">
+                Electronic Premium Remittance System
+                <button class="info-tooltip" 
+                        aria-label="What is EPRS?"
+                        aria-expanded="false"
+                        aria-controls="tooltip-eprs">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                    <text x="12" y="16" text-anchor="middle" fill="currentColor" font-size="14" font-weight="bold">i</text>
+                  </svg>
+                </button>
+              </h3>
+              
+              <div id="tooltip-eprs" class="tooltip-content" role="tooltip" hidden>
+                <p><strong>What you can do:</strong></p>
+                <ul>
+                  <li>Submit premium contributions online</li>
+                  <li>Generate payment reports</li>
+                  <li>Track payment history</li>
+                </ul>
+                <p><strong>What you need:</strong> Employer account, PRN (Payment Reference Number)</p>
+                <p><strong>ePOAF:</strong> Electronic Payment and Ordering Agreement Form</p>
+              </div>
+              
+              <div class="service-meta">
+                <span class="badge badge-medium" aria-label="Moderate difficulty">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M12 2L2 7v10c0 5.5 3.8 10.7 10 12 6.2-1.3 10-6.5 10-12V7l-10-5z" fill="currentColor"/>
+                  </svg>
+                  Moderate
+                </span>
+                <span class="badge badge-time" aria-label="Estimated 15 minutes">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                    <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                  ~15 min
+                </span>
+              </div>
+              
               <div class="service-links">
-                <a href="#" class="service-link">Login</a>
-                <span class="separator">|</span>
-                <a href="#" class="service-link">ePOAF</a>
+                <a href="#" class="service-link">
+                  Login
+                  <span class="visually-hidden"> to EPRS</span>
+                </a>
+                <span class="separator" aria-hidden="true">|</span>
+                <a href="#" class="service-link">
+                  ePOAF
+                  <span class="visually-hidden"> - Electronic Payment Agreement Form</span>
+                </a>
               </div>
               <p class="service-description">
                 Enables employers to remit their premium contributions online
               </p>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- Collection Section -->
-    <section class="services-section">
+    <section id="collection" class="services-section" aria-labelledby="collection-heading">
       <div class="container">
-        <h2 class="section-heading">Collection</h2>
+        <h2 id="collection-heading" class="section-heading">Collection</h2>
         <div class="services-grid">
-          <div class="service-card">
-            <div class="service-icon green-dark">ecrs</div>
+          <article class="service-card" aria-labelledby="service-ecrs">
+            <div class="service-icon green-dark" aria-hidden="true">ecrs</div>
             <div class="service-content">
-              <h3>Electronic Collection Reporting System</h3>
+              <h3 id="service-ecrs">
+                Electronic Collection Reporting System
+                <button class="info-tooltip" 
+                        aria-label="What is ECRS?"
+                        aria-expanded="false"
+                        aria-controls="tooltip-ecrs">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                    <text x="12" y="16" text-anchor="middle" fill="currentColor" font-size="14" font-weight="bold">i</text>
+                  </svg>
+                </button>
+              </h3>
+              
+              <div id="tooltip-ecrs" class="tooltip-content" role="tooltip" hidden>
+                <p><strong>What you can do:</strong></p>
+                <ul>
+                  <li>Submit daily collection reports (RF2 forms)</li>
+                  <li>Track submitted reports</li>
+                  <li>Generate collection summaries</li>
+                </ul>
+                <p><strong>Who can use:</strong> PhilHealth Accredited Collecting Agents only</p>
+                <p><strong>RF2:</strong> Report of Collections form</p>
+              </div>
+              
+              <div class="service-meta">
+                <span class="badge badge-medium" aria-label="Moderate difficulty">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M12 2L2 7v10c0 5.5 3.8 10.7 10 12 6.2-1.3 10-6.5 10-12V7l-10-5z" fill="currentColor"/>
+                  </svg>
+                  Moderate
+                </span>
+                <span class="badge badge-time" aria-label="Estimated 10 minutes">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                    <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                  ~10 min
+                </span>
+              </div>
+              
               <div class="service-links">
-                <a href="#" class="service-link">Login</a>
+                <a href="#" class="service-link">
+                  Login
+                  <span class="visually-hidden"> to Electronic Collection Reporting System</span>
+                </a>
               </div>
               <p class="service-description">
                 Enables PhilHealth Accredited Collecting Agents to submit daily
                 RF2 reports online
               </p>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- Accreditation Section -->
-    <section class="services-section alt-bg">
+    <section id="accreditation" class="services-section alt-bg" aria-labelledby="accreditation-heading">
       <div class="container">
-        <h2 class="section-heading">Accreditation</h2>
+        <h2 id="accreditation-heading" class="section-heading">Accreditation</h2>
         <div class="services-grid">
-          <div class="service-card">
-            <div class="service-icon blue">hf</div>
+          <article class="service-card" aria-labelledby="service-health-facilities">
+            <div class="service-icon blue" aria-hidden="true">hf</div>
             <div class="service-content">
-              <h3>Health Facilities</h3>
+              <h3 id="service-health-facilities">
+                Health Facilities
+                <button class="info-tooltip" 
+                        aria-label="What is Health Facilities accreditation?"
+                        aria-expanded="false"
+                        aria-controls="tooltip-health-facilities">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                    <text x="12" y="16" text-anchor="middle" fill="currentColor" font-size="14" font-weight="bold">i</text>
+                  </svg>
+                </button>
+              </h3>
+              
+              <div id="tooltip-health-facilities" class="tooltip-content" role="tooltip" hidden>
+                <p><strong>What you can do:</strong></p>
+                <ul>
+                  <li>Search accredited health facilities</li>
+                  <li>Check facility accreditation status</li>
+                  <li>View facility information</li>
+                  <li>Apply for facility accreditation</li>
+                </ul>
+                <p><strong>HCI:</strong> Health Care Institution (hospitals, clinics, etc.)</p>
+              </div>
+              
+              <div class="service-meta">
+                <span class="badge badge-easy" aria-label="Easy to search">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" fill="currentColor"/>
+                  </svg>
+                  Easy
+                </span>
+                <span class="badge badge-time" aria-label="Estimated 3 minutes">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                    <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                  ~3 min
+                </span>
+              </div>
+              
               <div class="service-links">
-                <a href="#" class="service-link">Login</a>
-                <span class="separator">|</span>
-                <a href="#" class="service-link">How to Register</a>
+                <a href="#" class="service-link">
+                  Login
+                  <span class="visually-hidden"> to Health Facilities portal</span>
+                </a>
+                <span class="separator" aria-hidden="true">|</span>
+                <a href="#" class="service-link">
+                  How to Register
+                  <span class="visually-hidden"> your health facility</span>
+                </a>
               </div>
               <p class="service-description">
                 Shows the complete list of HCIs including accreditation status
               </p>
             </div>
-          </div>
+          </article>
 
-          <div class="service-card">
-            <div class="service-icon blue-light">hcprof</div>
+          <article class="service-card" aria-labelledby="service-health-professionals">
+            <div class="service-icon blue-light" aria-hidden="true">hcprof</div>
             <div class="service-content">
-              <h3>Health Care Professionals</h3>
+              <h3 id="service-health-professionals">
+                Health Care Professionals
+                <button class="info-tooltip" 
+                        aria-label="What is Health Care Professionals portal?"
+                        aria-expanded="false"
+                        aria-controls="tooltip-health-professionals">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                    <text x="12" y="16" text-anchor="middle" fill="currentColor" font-size="14" font-weight="bold">i</text>
+                  </svg>
+                </button>
+              </h3>
+              
+              <div id="tooltip-health-professionals" class="tooltip-content" role="tooltip" hidden>
+                <p><strong>What you can do:</strong></p>
+                <ul>
+                  <li>Check your accreditation status</li>
+                  <li>View claims history</li>
+                  <li>Generate electronic accreditation ID</li>
+                  <li>Update professional information</li>
+                </ul>
+                <p><strong>Who can use:</strong> Licensed health care professionals (doctors, nurses, etc.)</p>
+              </div>
+              
+              <div class="service-meta">
+                <span class="badge badge-easy" aria-label="Easy process">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" fill="currentColor"/>
+                  </svg>
+                  Easy
+                </span>
+                <span class="badge badge-time" aria-label="Estimated 5 minutes">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                    <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                  ~5 min
+                </span>
+              </div>
+              
               <div class="service-links">
-                <a href="#" class="service-link">Register/Login</a>
+                <a href="#" class="service-link">
+                  Register/Login
+                  <span class="visually-hidden"> to Health Care Professionals portal</span>
+                </a>
               </div>
               <p class="service-description">
                 Enables the health care professional to check their
@@ -192,49 +512,204 @@
                 accreditation ID
               </p>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- Benefits Section -->
-    <section class="services-section">
+    <section id="benefits" class="services-section" aria-labelledby="benefits-heading">
       <div class="container">
-        <h2 class="section-heading">Benefits</h2>
+        <h2 id="benefits-heading" class="section-heading">Benefits</h2>
         <div class="services-grid">
-          <div class="service-card">
-            <div class="service-icon blue-medium">crs</div>
+          <article class="service-card" aria-labelledby="service-case-rates">
+            <div class="service-icon blue-medium" aria-hidden="true">crs</div>
             <div class="service-content">
-              <h3>Case Rates Search</h3>
+              <h3 id="service-case-rates">
+                Case Rates Search
+                <button class="info-tooltip" 
+                        aria-label="What is Case Rates Search?"
+                        aria-expanded="false"
+                        aria-controls="tooltip-case-rates">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                    <text x="12" y="16" text-anchor="middle" fill="currentColor" font-size="14" font-weight="bold">i</text>
+                  </svg>
+                </button>
+              </h3>
+              
+              <div id="tooltip-case-rates" class="tooltip-content" role="tooltip" hidden>
+                <p><strong>What you can do:</strong></p>
+                <ul>
+                  <li>Search benefit packages by medical condition</li>
+                  <li>View coverage amounts</li>
+                  <li>Check eligibility requirements</li>
+                </ul>
+                <p><strong>What are case rates:</strong> Fixed benefit amounts for specific medical procedures</p>
+              </div>
+              
+              <div class="service-meta">
+                <span class="badge badge-easy" aria-label="Easy to use">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" fill="currentColor"/>
+                  </svg>
+                  Easy
+                </span>
+                <span class="badge badge-time" aria-label="Estimated 2 minutes">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                    <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                  ~2 min
+                </span>
+              </div>
+              
               <div class="service-links">
-                <a href="#" class="service-link">Begin Search</a>
+                <a href="#" class="service-link">
+                  Begin Search
+                  <span class="visually-hidden"> for case rates and benefit packages</span>
+                </a>
               </div>
               <p class="service-description">
                 Provides members with information on PhilHealth's benefit
                 packages
               </p>
             </div>
-          </div>
+          </article>
 
-          <div class="service-card">
-            <div class="service-icon blue-light">cec</div>
+          <article class="service-card" aria-labelledby="service-claims-eligibility">
+            <div class="service-icon blue-light" aria-hidden="true">cec</div>
             <div class="service-content">
-              <h3>Claims Eligibility Checking</h3>
+              <h3 id="service-claims-eligibility">
+                Claims Eligibility Checking
+                <button class="info-tooltip" 
+                        aria-label="What is Claims Eligibility Checking?"
+                        aria-expanded="false"
+                        aria-controls="tooltip-claims-eligibility">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                    <text x="12" y="16" text-anchor="middle" fill="currentColor" font-size="14" font-weight="bold">i</text>
+                  </svg>
+                </button>
+              </h3>
+              
+              <div id="tooltip-claims-eligibility" class="tooltip-content" role="tooltip" hidden>
+                <p><strong>What you can do:</strong></p>
+                <ul>
+                  <li>Verify member eligibility for benefits</li>
+                  <li>Check contribution compliance</li>
+                  <li>View member coverage status</li>
+                </ul>
+                <p><strong>Who can use:</strong> PhilHealth accredited providers only</p>
+              </div>
+              
+              <div class="service-meta">
+                <span class="badge badge-easy" aria-label="Easy verification">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" fill="currentColor"/>
+                  </svg>
+                  Easy
+                </span>
+                <span class="badge badge-time" aria-label="Estimated 3 minutes">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                    <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                  ~3 min
+                </span>
+              </div>
+              
               <div class="service-links">
-                <a href="#" class="service-link">Login</a>
+                <a href="#" class="service-link">
+                  Login
+                  <span class="visually-hidden"> to Claims Eligibility Checking system</span>
+                </a>
               </div>
               <p class="service-description">
                 Enables providers to ascertain the benefit availment eligibility
                 of members
               </p>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
+    
+    </main>
 
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" 
+            class="scroll-top-btn" 
+            aria-label="Scroll to top of page"
+            title="Back to top">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 4l-8 8h16z" fill="currentColor"/>
+        <path d="M12 8v12" stroke="currentColor" stroke-width="2"/>
+      </svg>
+    </button>
+    
+    <!-- Floating Accessibility Menu -->
+    <div class="floating-accessibility">
+      <button id="accessibility-toggle" 
+              class="accessibility-float-btn" 
+              aria-label="Open accessibility options"
+              aria-expanded="false"
+              aria-controls="accessibility-menu"
+              title="Accessibility Options">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="5" r="2" fill="currentColor"/>
+          <path d="M12 7v4M8 9h8M8 13l4 8M16 13l-4 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      
+      <div id="accessibility-menu" class="accessibility-dropdown" hidden>
+        <h3 class="accessibility-menu-title">Accessibility Options</h3>
+        <button id="contrast-toggle" 
+                class="accessibility-menu-btn"
+                aria-label="Toggle high contrast mode"
+                aria-pressed="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" fill="currentColor" opacity="0.3"/>
+            <path d="M12 2 A10 10 0 0 1 12 22 Z" fill="currentColor"/>
+          </svg>
+          <span>High Contrast</span>
+        </button>
+        
+        <button id="voice-toggle" 
+                class="accessibility-menu-btn"
+                aria-label="Toggle voice commands"
+                aria-pressed="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z" fill="currentColor"/>
+            <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z" fill="currentColor"/>
+          </svg>
+          <span>Voice Nav</span>
+        </button>
+        
+        <button id="text-size-toggle" 
+                class="accessibility-menu-btn"
+                aria-label="Increase text size">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <text x="4" y="18" font-size="14" fill="currentColor" font-weight="bold">A+</text>
+          </svg>
+          <span>Text Size</span>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Voice Command Status -->
+    <div id="voice-status" 
+         class="voice-status" 
+         role="status" 
+         aria-live="polite" 
+         aria-atomic="true"
+         hidden>
+      <span class="voice-icon">🎤</span>
+      <span class="voice-text">Listening...</span>
+    </div>
+    
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
       <div class="container">
         <div class="footer-content">
           <div class="footer-section">
@@ -287,5 +762,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="online-services-accessibility.js"></script>
   </body>
 </html>

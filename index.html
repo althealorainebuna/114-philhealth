@@ -3,249 +3,266 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PhilHealth - Your Partner in Health</title>
+    <meta name="description" content="PhilHealth - Philippine Health Insurance Corporation. Your partner in health providing accessible, affordable healthcare services for all Filipinos." />
+    <meta name="theme-color" content="#007A3D" />
+    <title>PhilHealth - Your Partner in Health | Philippine Health Insurance Corporation</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
     <!-- Navigation Bar -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
       <div class="container">
         <div class="nav-content">
           <div class="logo-section">
-            <div class="logo">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                <circle cx="20" cy="10" r="8" fill="#00a84f" />
-                <circle cx="28" cy="18" r="6" fill="#ffc300" />
-                <circle cx="20" cy="28" r="8" fill="#00a84f" />
-                <circle cx="12" cy="18" r="6" fill="#ffc300" />
+            <a href="index.html" class="logo" aria-label="PhilHealth Home">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true" focusable="false">
+                <circle cx="20" cy="10" r="8" fill="#007A3D" />
+                <circle cx="28" cy="18" r="6" fill="#D68400" />
+                <circle cx="20" cy="28" r="8" fill="#007A3D" />
+                <circle cx="12" cy="18" r="6" fill="#D68400" />
               </svg>
               <span class="logo-text">PhilHealth</span>
-            </div>
-            <div class="bagong-pilipinas">
-              <svg width="45" height="45" viewBox="0 0 100 100" fill="none">
+            </a>
+            <div class="bagong-pilipinas" aria-label="Bagong Pilipinas">
+              <svg width="45" height="45" viewBox="0 0 100 100" fill="none" aria-hidden="true" focusable="false">
                 <circle cx="50" cy="35" r="18" fill="#FFD700" />
                 <path d="M 50 60 L 35 80 L 65 80 Z" fill="#DC143C" />
-                <path
-                  d="M 50 60 L 35 80 L 65 80 Z"
-                  fill="#0066CC"
-                  opacity="0.5"
-                />
+                <path d="M 50 60 L 35 80 L 65 80 Z" fill="#0066CC" opacity="0.5" />
               </svg>
               <span class="bp-text">BAGONG PILIPINAS</span>
             </div>
           </div>
-          <div class="search-bar">
-            <input type="text" placeholder="Search services..." />
-            <button class="search-btn">
-              <span>🔍</span>
+          <div class="search-bar" role="search">
+            <label for="main-search" class="sr-only">Search services</label>
+            <input 
+              type="search" 
+              id="main-search" 
+              name="search"
+              placeholder="Search services..." 
+              aria-label="Search PhilHealth services"
+            />
+            <button class="search-btn" type="submit" aria-label="Submit search">
+              <span aria-hidden="true">🔍</span>
             </button>
           </div>
           <div class="nav-links">
-            <a href="index.html" class="nav-link">home</a>
-            <a href="contact.html" class="nav-link">contact us</a>
-            <a href="disclaimer.html" class="nav-link">disclaimer</a>
-            <a href="privacy-notice.html" class="nav-link">privacy notice</a>
+            <a href="index.html" class="nav-link" aria-current="page">Home</a>
+            <a href="contact.html" class="nav-link">Contact Us</a>
+            <a href="disclaimer.html" class="nav-link">Disclaimer</a>
+            <a href="privacy-notice.html" class="nav-link">Privacy Notice</a>
           </div>
         </div>
       </div>
     </nav>
 
     <!-- Main Navigation Menu -->
-    <div class="main-menu">
+    <div class="main-menu" role="navigation" aria-label="Secondary navigation">
       <div class="container">
         <ul class="menu-items">
-          <li><a href="about.html" class="menu-link">about us</a></li>
-          <li><a href="members.html" class="menu-link">members</a></li>
-          <li><a href="partners.html" class="menu-link">partners</a></li>
-          <li>
-            <a href="online-services.html" class="menu-link">online services</a>
-          </li>
-          <li><a href="downloads.html" class="menu-link">downloads</a></li>
-          <li>
-            <a href="transparency.html" class="menu-link">transparency</a>
-          </li>
+          <li><a href="about.html" class="menu-link">About Us</a></li>
+          <li><a href="members.html" class="menu-link">Members</a></li>
+          <li><a href="partners.html" class="menu-link">Partners</a></li>
+          <li><a href="online-services.html" class="menu-link">Online Services</a></li>
+          <li><a href="downloads.html" class="menu-link">Downloads</a></li>
+          <li><a href="transparency.html" class="menu-link">Transparency</a></li>
         </ul>
       </div>
     </div>
 
     <!-- Hero Section -->
-    <section class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <div class="hero-text">
-            <h1>Sa Bagong Pilipinas, malayo ako sa sakit.</h1>
-            <p class="hero-subtitle">PhilHealth YAKAP</p>
-          </div>
-          <div class="hero-image">
-            <img
-              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 350'%3E%3Crect fill='%23e8f5e9' width='500' height='350'/%3E%3Ctext x='50%' y='50%' text-anchor='middle' dy='.3em' font-size='18' fill='%23666'%3EPhilHealth YAKAP Campaign%3C/text%3E%3C/svg%3E"
-              alt="PhilHealth YAKAP"
-            />
+    <main id="main-content">
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-text">
+              <h1 id="hero-heading">Sa Bagong Pilipinas, malayo ako sa sakit.</h1>
+              <p class="hero-subtitle">PhilHealth YAKAP</p>
+            </div>
+            <div class="hero-image">
+              <img
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 350'%3E%3Crect fill='%23e8f5e9' width='500' height='350'/%3E%3Ctext x='50%' y='50%' text-anchor='middle' dy='.3em' font-size='18' fill='%23666'%3EPhilHealth YAKAP Campaign%3C/text%3E%3C/svg%3E"
+                alt="PhilHealth YAKAP Campaign - Health coverage for all Filipinos"
+              />
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Campaign Carousel Section -->
-    <section class="campaign-carousel">
-      <div class="container">
-        <div class="carousel-wrapper">
-          <button class="carousel-btn prev">❮</button>
-          <div class="campaign-card">
-            <div class="campaign-header">
-              <h2>Sa Benepisyong PhilHealth,</h2>
-              <span class="highlight-badge">PANATAG KA!</span>
+      <!-- Campaign Carousel Section -->
+      <section class="campaign-carousel" aria-labelledby="campaign-heading">
+        <div class="container">
+          <h2 id="campaign-heading" class="sr-only">Enhanced Benefits Campaign</h2>
+          <div class="carousel-wrapper" role="region" aria-label="Benefits carousel">
+            <button class="carousel-btn prev" aria-label="Previous benefit">❮</button>
+            <div class="campaign-card">
+              <div class="campaign-header">
+                <h3>Sa Benepisyong PhilHealth,</h3>
+                <span class="highlight-badge">PANATAG KA!</span>
+              </div>
+              <div class="campaign-body">
+                <div class="campaign-image">
+                  <img
+                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 250'%3E%3Crect fill='%23fff3cd' width='300' height='250'/%3E%3Ctext x='50%' y='50%' text-anchor='middle' dy='.3em' font-size='16' fill='%23666'%3EHealth Benefit%3C/text%3E%3C/svg%3E"
+                    alt="Enhanced health benefit package"
+                  />
+                </div>
+                <div class="campaign-details">
+                  <h4>Enhanced</h4>
+                  <p class="benefit-title">Acute myocardial infarction (angioplasty)</p>
+                  <p class="benefit-amount" aria-label="Benefit amount 524 thousand pesos">₱524k</p>
+                  <p class="benefit-original">from ₱21,900</p>
+                  <p class="benefit-date">(as of February 3, 2025)</p>
+                </div>
+              </div>
             </div>
-            <div class="campaign-body">
-              <div class="campaign-image">
+            <button class="carousel-btn next" aria-label="Next benefit">❯</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Info Cards Section -->
+      <section class="info-cards-section" aria-labelledby="info-cards-heading">
+        <div class="container">
+          <h2 id="info-cards-heading" class="sr-only">Key Services and Information</h2>
+          <div class="info-cards-grid">
+            <!-- Members Card -->
+            <article class="info-card">
+              <div class="card-image">
                 <img
-                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 250'%3E%3Crect fill='%23fff3cd' width='300' height='250'/%3E%3Ctext x='50%' y='50%' text-anchor='middle' dy='.3em' font-size='16' fill='%23666'%3EHealth Benefit%3C/text%3E%3C/svg%3E"
-                  alt="Enhanced Benefits"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 250'%3E%3Crect fill='%23e8f5e9' width='300' height='250'/%3E%3Ctext x='50%' y='50%' text-anchor='middle' dy='.3em' font-size='16' fill='%23666'%3EFamily Members%3C/text%3E%3C/svg%3E"
+                  alt=""
                 />
               </div>
-              <div class="campaign-details">
-                <h3>Enhanced</h3>
-                <p class="benefit-title">
-                  Acute myocardial infarction (angioplasty)
+              <div class="card-content">
+                <h3>Members</h3>
+                <p>
+                  This section features the different membership categories,
+                  premium payment, data amendment and other procedures that each
+                  type of member must know. We have custom-fit the information to
+                  ensure that we address the specific concerns of each of our
+                  member.
                 </p>
-                <p class="benefit-amount">₱524k</p>
-                <p class="benefit-original">from ₱21,900</p>
-                <p class="benefit-date">(as of February 3, 2025)</p>
+                <a href="members.html" class="card-link">
+                  Learn More
+                  <span class="sr-only">about membership</span>
+                </a>
               </div>
-            </div>
-          </div>
-          <button class="carousel-btn next">❯</button>
-        </div>
-      </div>
-    </section>
+            </article>
 
-    <!-- Info Cards Section -->
-    <section class="info-cards-section">
-      <div class="container">
-        <div class="info-cards-grid">
-          <!-- Members Card -->
-          <div class="info-card">
-            <div class="card-image">
-              <img
-                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 250'%3E%3Crect fill='%23e8f5e9' width='300' height='250'/%3E%3Ctext x='50%' y='50%' text-anchor='middle' dy='.3em' font-size='16' fill='%23666'%3EFamily Members%3C/text%3E%3C/svg%3E"
-                alt="Members"
-              />
-            </div>
-            <div class="card-content">
-              <h3>Members</h3>
-              <p>
-                This section features the different membership categories,
-                premium payment, data amendment and other procedures that each
-                type of member must know. We have custom-fit the information to
-                ensure that we address the specific concerns of each of our
-                member.
-              </p>
-              <a href="members.html" class="card-link">Learn More →</a>
-            </div>
-          </div>
+            <!-- Benefits Card -->
+            <article class="info-card">
+              <div class="card-image">
+                <img
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 250'%3E%3Crect fill='%23fff3cd' width='300' height='250'/%3E%3Ctext x='50%' y='50%' text-anchor='middle' dy='.3em' font-size='16' fill='%23666'%3EHealth Benefits%3C/text%3E%3C/svg%3E"
+                  alt=""
+                />
+              </div>
+              <div class="card-content">
+                <h3>Benefits</h3>
+                <p>
+                  This section features a variety of comprehensive health care
+                  services -from basic primary care to catastrophic packages to
+                  provide members and their families with the information they
+                  need on benefits and benefits availment. It includes eligibility
+                  requirements, coverage.
+                </p>
+                <a href="#" class="card-link">
+                  Learn More
+                  <span class="sr-only">about benefits</span>
+                </a>
+              </div>
+            </article>
 
-          <!-- Benefits Card -->
-          <div class="info-card">
-            <div class="card-image">
-              <img
-                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 250'%3E%3Crect fill='%23fff3cd' width='300' height='250'/%3E%3Ctext x='50%' y='50%' text-anchor='middle' dy='.3em' font-size='16' fill='%23666'%3EHealth Benefits%3C/text%3E%3C/svg%3E"
-                alt="Benefits"
-              />
-            </div>
-            <div class="card-content">
-              <h3>Benefits</h3>
-              <p>
-                This section features a variety of comprehensive health care
-                services -from basic primary care to catastrophic packages to
-                provide members and their families with the information they
-                need on benefits and benefits availment. It includes eligibility
-                requirements, coverage.
-              </p>
-              <a href="#" class="card-link">Learn More →</a>
-            </div>
-          </div>
+            <!-- Online Services Card -->
+            <article class="info-card">
+              <div class="card-image">
+                <img
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 250'%3E%3Crect fill='%23e3f2fd' width='300' height='250'/%3E%3Ctext x='50%' y='50%' text-anchor='middle' dy='.3em' font-size='16' fill='%23666'%3EOnline Services%3C/text%3E%3C/svg%3E"
+                  alt=""
+                />
+              </div>
+              <div class="card-content">
+                <h3>Online Services</h3>
+                <p>
+                  Considered the newest addition to our menu of electronic
+                  services, this section features the different access points that
+                  our stakeholders can tap to transact with us online. It includes
+                  registration, premium payment and reporting and even locating
+                  our offices
+                </p>
+                <a href="online-services.html" class="card-link">
+                  Learn More
+                  <span class="sr-only">about online services</span>
+                </a>
+              </div>
+            </article>
 
-          <!-- Online Services Card -->
-          <div class="info-card">
-            <div class="card-image">
-              <img
-                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 250'%3E%3Crect fill='%23e3f2fd' width='300' height='250'/%3E%3Ctext x='50%' y='50%' text-anchor='middle' dy='.3em' font-size='16' fill='%23666'%3EOnline Services%3C/text%3E%3C/svg%3E"
-                alt="Online Services"
-              />
-            </div>
-            <div class="card-content">
-              <h3>Online Services</h3>
-              <p>
-                Considered the newest addition to our menu of electronic
-                services, this section features the different access points that
-                our stakeholders can tap to transact with us online. It includes
-                registration, premium payment and reporting and even locating
-                our offices
-              </p>
-              <a href="#" class="card-link">Learn More →</a>
-            </div>
-          </div>
-
-          <!-- Partners Card -->
-          <div class="info-card">
-            <div class="card-image">
-              <img
-                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 250'%3E%3Crect fill='%23f0f4c3' width='300' height='250'/%3E%3Ctext x='50%' y='50%' text-anchor='middle' dy='.3em' font-size='16' fill='%23666'%3EPartner Network%3C/text%3E%3C/svg%3E"
-                alt="Partners"
-              />
-            </div>
-            <div class="card-content">
-              <h3>Our Partners</h3>
-              <p>
-                We forge partnerships with only the best in the industry to
-                fulfill our mandate of providing all Filipinos with accessible,
-                available, acceptable and affordable health care services that
-                will lead to better health outcomes and improved quality of life
-              </p>
-              <a href="partners.html" class="card-link">Learn More →</a>
-            </div>
+            <!-- Partners Card -->
+            <article class="info-card">
+              <div class="card-image">
+                <img
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 250'%3E%3Crect fill='%23f0f4c3' width='300' height='250'/%3E%3Ctext x='50%' y='50%' text-anchor='middle' dy='.3em' font-size='16' fill='%23666'%3EPartner Network%3C/text%3E%3C/svg%3E"
+                  alt=""
+                />
+              </div>
+              <div class="card-content">
+                <h3>Our Partners</h3>
+                <p>
+                  We forge partnerships with only the best in the industry to
+                  fulfill our mandate of providing all Filipinos with accessible,
+                  available, acceptable and affordable health care services that
+                  will lead to better health outcomes and improved quality of life
+                </p>
+                <a href="partners.html" class="card-link">
+                  Learn More
+                  <span class="sr-only">about our partners</span>
+                </a>
+              </div>
+            </article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Transparency Section -->
-    <section class="transparency-section">
-      <div class="container">
-        <h2 class="section-title">Transparency & Information</h2>
+      <!-- Transparency Section -->
+      <section class="transparency-section" aria-labelledby="transparency-heading">
+        <div class="container">
+          <h2 id="transparency-heading" class="section-title">Transparency & Information</h2>
 
-        <div class="transparency-grid">
-          <a href="#" class="transparency-item">
-            <div class="trans-icon">📋</div>
-            <span>Circulars</span>
-          </a>
-          <a href="#" class="transparency-item">
-            <div class="trans-icon">📢</div>
-            <span>Advisories</span>
-          </a>
-          <a href="#" class="transparency-item">
-            <div class="trans-icon">📰</div>
-            <span>News</span>
-          </a>
-          <a href="#" class="transparency-item">
-            <div class="trans-icon">📄</div>
-            <span>IB</span>
-          </a>
-          <a href="#" class="transparency-item">
-            <div class="trans-icon">💼</div>
-            <span>Job Vacancies</span>
-          </a>
-          <a href="#" class="transparency-item">
-            <div class="trans-icon">📃</div>
-            <span>Official Statements</span>
-          </a>
-          <a href="#" class="transparency-item">
-            <div class="trans-icon">📋</div>
-            <span>Joint Issuances</span>
-          </a>
+          <nav class="transparency-grid" aria-label="Transparency resources">
+            <a href="#" class="transparency-item">
+              <div class="trans-icon" aria-hidden="true">📋</div>
+              <span>Circulars</span>
+            </a>
+            <a href="#" class="transparency-item">
+              <div class="trans-icon" aria-hidden="true">📢</div>
+              <span>Advisories</span>
+            </a>
+            <a href="#" class="transparency-item">
+              <div class="trans-icon" aria-hidden="true">📰</div>
+              <span>News</span>
+            </a>
+            <a href="#" class="transparency-item">
+              <div class="trans-icon" aria-hidden="true">📄</div>
+              <span>IB</span>
+            </a>
+            <a href="#" class="transparency-item">
+              <div class="trans-icon" aria-hidden="true">💼</div>
+              <span>Job Vacancies</span>
+            </a>
+            <a href="#" class="transparency-item">
+              <div class="trans-icon" aria-hidden="true">📃</div>
+              <span>Official Statements</span>
+            </a>
+            <a href="#" class="transparency-item">
+              <div class="trans-icon" aria-hidden="true">📋</div>
+              <span>Joint Issuances</span>
+            </a>
+          </nav>
         </div>
-      </div>
-    </section>
+      </section>
 
     <!-- Featured Resources Section -->
     <section class="featured-resources">
@@ -278,75 +295,98 @@
       </div>
     </section>
 
-    <!-- Social Media & Certifications Section -->
-    <section class="social-certifications">
-      <div class="container">
-        <h2 class="section-title">Follow Us & Learn More</h2>
+      <!-- Social Media & Certifications Section -->
+      <section class="social-certifications" aria-labelledby="social-heading">
+        <div class="container">
+          <h2 id="social-heading" class="section-title">Follow Us & Learn More</h2>
 
-        <div class="certifications">
-          <h3>Government Certifications</h3>
-          <div class="cert-icons">
-            <div class="cert-icon">🏛️</div>
-            <div class="cert-icon">🏢</div>
-            <div class="cert-icon">📜</div>
+          <div class="certifications">
+            <h3>Government Certifications</h3>
+            <div class="cert-icons" role="img" aria-label="Government certification badges">
+              <div class="cert-icon" aria-hidden="true">🏛️</div>
+              <div class="cert-icon" aria-hidden="true">🏢</div>
+              <div class="cert-icon" aria-hidden="true">📜</div>
+            </div>
+          </div>
+
+          <nav class="social-media" aria-label="Social media links">
+            <h3>Connect With Us</h3>
+            <div class="social-icons">
+              <a href="#" class="social-icon facebook" aria-label="Follow us on Facebook">
+                <span aria-hidden="true">f</span>
+              </a>
+              <a href="#" class="social-icon twitter" aria-label="Follow us on Twitter">
+                <span aria-hidden="true">𝕏</span>
+              </a>
+              <a href="#" class="social-icon youtube" aria-label="Subscribe on YouTube">
+                <span aria-hidden="true">▶</span>
+              </a>
+              <a href="#" class="social-icon instagram" aria-label="Follow us on Instagram">
+                <span aria-hidden="true">📷</span>
+              </a>
+              <a href="#" class="social-icon spotify" aria-label="Listen on Spotify">
+                <span aria-hidden="true">🎵</span>
+              </a>
+              <a href="#" class="social-icon tiktok" aria-label="Follow us on TikTok">
+                <span aria-hidden="true">♪</span>
+              </a>
+            </div>
+          </nav>
+
+          <div class="gender-development">
+            <img
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect fill='%2385c100' width='200' height='200' rx='20'/%3E%3Ctext x='50%' y='50%' text-anchor='middle' dy='.3em' font-size='14' fill='white' font-weight='bold'%3EGENDER AND%3C/text%3E%3Ctext x='50%' y='70%' text-anchor='middle' font-size='14' fill='white' font-weight='bold'%3EDEVELOPMENT%3C/text%3E%3C/svg%3E"
+              alt="Gender and Development Program Badge"
+            />
+          </div>
+
+          <div class="awards">
+            <img
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 150'%3E%3Ccircle cx='75' cy='75' r='70' fill='%234169e1'/%3E%3Ctext x='50%' y='50%' text-anchor='middle' dy='.3em' font-size='12' fill='white' font-weight='bold'%3EAWARD%3C/text%3E%3C/svg%3E"
+              alt="PhilHealth Excellence Award"
+            />
           </div>
         </div>
-
-        <div class="social-media">
-          <h3>Connect With Us</h3>
-          <div class="social-icons">
-            <a href="#" class="social-icon facebook">f</a>
-            <a href="#" class="social-icon twitter">𝕏</a>
-            <a href="#" class="social-icon youtube">▶</a>
-            <a href="#" class="social-icon instagram">📷</a>
-            <a href="#" class="social-icon spotify">🎵</a>
-            <a href="#" class="social-icon tiktok">♪</a>
-          </div>
-        </div>
-
-        <div class="gender-development">
-          <img
-            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect fill='%2385c100' width='200' height='200' rx='20'/%3E%3Ctext x='50%' y='50%' text-anchor='middle' dy='.3em' font-size='14' fill='white' font-weight='bold'%3EGENDER AND%3C/text%3E%3Ctext x='50%' y='70%' text-anchor='middle' font-size='14' fill='white' font-weight='bold'%3EDEVELOPMENT%3C/text%3E%3C/svg%3E"
-            alt="Gender and Development"
-          />
-        </div>
-
-        <div class="awards">
-          <img
-            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 150'%3E%3Ccircle cx='75' cy='75' r='70' fill='%234169e1'/%3E%3Ctext x='50%' y='50%' text-anchor='middle' dy='.3em' font-size='12' fill='white' font-weight='bold'%3EAWARD%3C/text%3E%3C/svg%3E"
-            alt="Award Badge"
-          />
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
       <div class="container">
         <div class="footer-content">
           <div class="footer-section">
             <h4>Quick Links</h4>
-            <ul>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="members.html">Members</a></li>
-              <li><a href="partners.html">Our Partners</a></li>
-              <li><a href="#">Privacy Notice</a></li>
-            </ul>
+            <nav aria-label="Footer quick links">
+              <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="members.html">Members</a></li>
+                <li><a href="partners.html">Our Partners</a></li>
+                <li><a href="privacy-notice.html">Privacy Notice</a></li>
+              </ul>
+            </nav>
           </div>
           <div class="footer-section">
             <h4>Services</h4>
-            <ul>
-              <li><a href="#">Member Portal</a></li>
-              <li><a href="#">Group Enrollment</a></li>
-              <li><a href="#">Claims Management</a></li>
-              <li><a href="downloads.html">Downloads</a></li>
-            </ul>
+            <nav aria-label="Footer services links">
+              <ul>
+                <li><a href="online-services.html">Member Portal</a></li>
+                <li><a href="online-services.html">Group Enrollment</a></li>
+                <li><a href="#">Claims Management</a></li>
+                <li><a href="downloads.html">Downloads</a></li>
+              </ul>
+            </nav>
           </div>
           <div class="footer-section">
             <h4>Contact</h4>
-            <p>Philippine Health Insurance Corporation</p>
-            <p>Email: support@philhealth.gov.ph</p>
-            <p>Phone: 1-800-PHILHEALTH</p>
+            <address>
+              <p>Philippine Health Insurance Corporation</p>
+              <p>
+                Email: <a href="mailto:support@philhealth.gov.ph">support@philhealth.gov.ph</a>
+              </p>
+              <p>
+                Phone: <a href="tel:1-800-PHILHEALTH">1-800-PHILHEALTH</a>
+              </p>
+            </address>
           </div>
         </div>
         <div class="footer-disclaimer">
