@@ -1,0 +1,247 @@
+/* Members Page Styles */
+
+/* Members Hero Section */
+.members-hero {
+  padding: 2rem 0;
+  background-color: #fff;
+}
+
+.hero-image {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Members Content Section */
+.members-content {
+  padding: 4rem 0;
+  background-color: #fff;
+}
+
+.contributors-section {
+  margin-bottom: 4rem;
+}
+
+.section-heading {
+  font-size: 2rem;
+  color: var(--dark-color);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.section-heading:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+.contributors-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contributors-list li {
+  padding: 0.75rem 0;
+  padding-left: 2rem;
+  position: relative;
+  color: #555;
+  line-height: 1.8;
+  font-size: 0.98rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.contributors-list li:last-child {
+  border-bottom: none;
+}
+
+.contributors-list li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.contributors-list li strong {
+  color: var(--dark-color);
+  font-weight: 600;
+}
+
+/* Additional Information Section */
+.additional-info {
+  margin: 4rem 0;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8f5e9 100%);
+  border-radius: 12px;
+}
+
+.additional-info h3 {
+  font-size: 1.6rem;
+  color: var(--dark-color);
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.info-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  border-top: 4px solid var(--primary-color);
+}
+
+.info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.info-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.info-card h4 {
+  font-size: 1.1rem;
+  color: var(--dark-color);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.info-card p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Benefits Section */
+.benefits-section {
+  margin: 4rem 0;
+}
+
+.benefits-section h3 {
+  font-size: 1.6rem;
+  color: var(--dark-color);
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.benefit-item {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.benefit-item:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.benefit-item:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color) 0%, #008a3f 100%);
+}
+
+.benefit-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.benefit-item h4 {
+  font-size: 1.1rem;
+  color: var(--dark-color);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.benefit-item p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-heading {
+    font-size: 1.5rem;
+  }
+
+  .additional-info h3,
+  .benefits-section h3 {
+    font-size: 1.3rem;
+  }
+
+  .info-grid,
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-heading {
+    font-size: 1.3rem;
+  }
+
+  .contributors-list li {
+    padding-left: 1.75rem;
+    font-size: 0.9rem;
+  }
+
+  .info-card,
+  .benefit-item {
+    padding: 1.5rem;
+  }
+
+  .additional-info {
+    padding: 1.5rem;
+  }
+}
