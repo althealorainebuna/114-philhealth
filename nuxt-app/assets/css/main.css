@@ -187,52 +187,43 @@
 }
 
 @layer utilities {
-  /* High Contrast Mode */
-  .high-contrast {
+  /* Base: when high contrast is ON, default page colors */
+  .high-contrast body {
     @apply bg-black text-white;
   }
 
+  /* Override common backgrounds */
+  .high-contrast .bg-neutral-50,
+  .high-contrast .bg-white {
+    background-color: #000 !important;
+  }
+
+  /* Override common dark text utilities */
+  .high-contrast .text-neutral-900,
+  .high-contrast .text-neutral-800,
+  .high-contrast .text-gray-700,
+  .high-contrast .text-gray-800 {
+    color: #fff !important;
+  }
+
+  /* Links and main interactive things */
   .high-contrast a,
   .high-contrast .link {
     @apply text-cyan-400 underline font-bold;
   }
 
+  /* Buttons */
   .high-contrast .btn-primary,
   .high-contrast .btn-accent {
     @apply bg-yellow-400 text-black border-2 border-yellow-400;
   }
 
+  /* Cards / panels */
   .high-contrast .card {
     @apply bg-black border-4 border-yellow-400;
   }
-
-  /* Large Text Mode */
-  .large-text {
-    font-size: 125%;
-  }
-
-  .large-text h1 { font-size: 3.125rem; }
-  .large-text h2 { font-size: 2.5rem; }
-  .large-text h3 { font-size: 1.875rem; }
-
-  /* Extra Large Text Mode */
-  .extra-large-text {
-    font-size: 150%;
-  }
-
-  .extra-large-text h1 { font-size: 3.75rem; }
-  .extra-large-text h2 { font-size: 3rem; }
-  .extra-large-text h3 { font-size: 2.25rem; }
-
-  /* Focus Visible Ring Variants */
-  .focus-ring-primary {
-    @apply focus-visible:ring-4 focus-visible:ring-primary/30;
-  }
-
-  .focus-ring-accent {
-    @apply focus-visible:ring-4 focus-visible:ring-accent/30;
-  }
 }
+
 
 /* Print Styles */
 @media print {
@@ -249,3 +240,5 @@
     break-inside: avoid;
   }
 }
+
+

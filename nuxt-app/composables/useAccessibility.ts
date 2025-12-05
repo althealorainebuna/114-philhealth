@@ -8,8 +8,17 @@ export interface VoiceCommand {
 
 export const useAccessibility = () => {
   // High Contrast Mode
-  const isHighContrast = ref(false)
-  
+  const isHighContrast = useState('isHighContrast', () => false)
+
+  const applyHighContrastClass = (enabled: boolean) => {
+    if (!process.client) return
+    const root = document.documentElement // or document.body
+    if (enabled) {
+      root.classList.add('high-contrast')
+    } else {
+      root.classList.remove('high-contrast')
+    }
+  }
   // Text Size (0 = normal, 1 = large, 2 = extra large)
   const textSizeLevel = ref(0)
   
@@ -26,19 +35,11 @@ export const useAccessibility = () => {
    */
   const toggleHighContrast = () => {
     isHighContrast.value = !isHighContrast.value
-    
+    applyHighContrastClass(isHighContrast.value)
+
+    // (optional) remember preference
     if (process.client) {
-      if (isHighContrast.value) {
-        document.body.classList.add('high-contrast')
-        localStorage.setItem('philhealth_high_contrast', 'enabled')
-      } else {
-        document.body.classList.remove('high-contrast')
-        localStorage.setItem('philhealth_high_contrast', 'disabled')
-      }
-      
-      announceToScreenReader(
-        isHighContrast.value ? 'High contrast mode enabled' : 'High contrast mode disabled'
-      )
+      localStorage.setItem('high-contrast', isHighContrast.value ? '1' : '0')
     }
   }
 
@@ -290,6 +291,15 @@ export const useAccessibility = () => {
   // Initialize on mount
   onMounted(() => {
     loadPreferences()
+    
+    if (!process.client) return
+
+    // restore preference
+    const saved = localStorage.getItem('high-contrast')
+    if (saved === '1') {
+      isHighContrast.value = true
+      applyHighContrastClass(true)
+    }
   })
 
   onBeforeUnmount(() => {
