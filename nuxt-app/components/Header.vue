@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-white shadow-md" role="banner">
+  <header class="fixed top-0 inset-x-0 z-50 bg-white shadow-md" role="banner">
     <!-- Utility Strip Navigation -->
     <div class="hidden md:block bg-gray-100 border-b border-gray-200">
       <div class="container mx-auto px-4">
@@ -36,7 +36,7 @@
     </div>
 
     <!-- Main Header Bar -->
-    <div class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+    <div class="bg-white border-b border-gray-200 shadow-sm">
       <div class="container mx-auto px-4">
         <div class="flex items-center justify-between py-4 gap-6">
           <!-- Logo and Branding -->
